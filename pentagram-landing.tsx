@@ -17,6 +17,10 @@ import {
 } from "lucide-react"
 import TaxIntelligenceDashboard from "./tax-intelligence-dashboard"
 
+import LeasesManagementDashboard from "./leases-management-dashboard"
+import { Badge } from "@/components/ui/badge"
+import RevenueRecognitionDashboard from "./revenue-recognition-dashboard"
+
 /*
   Numio – Financial Intelligence Suite
   Ultra‑polished landing page showcasing multiple products with immersive animations.
@@ -85,10 +89,10 @@ const products = [
         description:
             "Our R&D team is developing next-generation solutions to address emerging financial challenges with cutting-edge AI and machine learning technologies.",
         features: [
-            /* "Predictive cash flow optimization",
+            "Predictive cash flow optimization",
             "Autonomous financial close acceleration",
             "Cross-border transaction harmonization",
-            "Regulatory change impact simulation", */
+            "Regulatory change impact simulation",
         ],
         color: "from-amber-500 to-orange-400",
         image: "/future-concept.jpg",
@@ -838,152 +842,166 @@ export default function PentagramLandingPage() {
 
             {/* ------------------------------------------------------------------ PRODUCTS SHOWCASE */}
             <section
-              id="products"
-              ref={productsRef}
-              className="py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden bg-primary/5 dark:bg-secondary/80 pb-10"
+                id="products"
+                ref={productsRef}
+                className="py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden bg-primary/5 dark:bg-secondary/80 pb-10"
             >
-              <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                  <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-3xl sm:text-4xl font-extrabold text-secondary dark:text-white mb-4"
-                  >
-                    Our Product Suite
-                  </motion.h2>
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="max-w-2xl mx-auto text-slate-600 dark:text-slate-300"
-                  >
-                    Comprehensive financial intelligence solutions designed for the modern enterprise
-                  </motion.p>
-                </div>
-
-                <Tabs defaultValue="tax" value={activeProduct} onValueChange={setActiveProduct} className="w-full">
-                  <div className="flex justify-center mb-12">
-                    <TabsList className="flex">
-                      {products.map((product) => (
-                        <TabsTrigger
-                          key={product.id}
-                          value={product.id}
-                          className="flex items-center gap-2 px-4 py-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary/20 data-[state=active]:to-accent/20 dark:data-[state=active]:from-primary/30 dark:data-[state=active]:to-accent/30"
-                        >
-                          {product.icon}
-                          <span className="hidden sm:inline">{product.name}</span>
-                        </TabsTrigger>
-                      ))}
-                    </TabsList>
-                  </div>
-
-                  <div className="relative mb-10">
-                    {products.map((product) => (
-                      <TabsContent
-                        key={product.id}
-                        value={product.id}
-                        className={`w-full ${activeProduct === product.id ? "block" : "hidden"}`}
-                      >
-                        <AnimatePresence mode="wait">
-                          <motion.div
-                            key={product.id}
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <motion.h2
                             initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.5 }}
-                            className="grid md:grid-cols-2 gap-8 items-center"
-                          >
-                            <div className="order-2 md:order-1">
-                              <div className="flex items-center gap-3 mb-4">
-                                <div className={`p-2 rounded-lg bg-gradient-to-r ${product.color} text-white`}>
-                                  {product.icon}
-                                </div>
-                                <h3 className="text-2xl sm:text-3xl font-bold text-secondary dark:text-white">
-                                  {product.name}
-                                </h3>
-                              </div>
-                              <p className="text-lg sm:text-xl font-medium text-primary dark:text-accent mb-4">
-                                {product.tagline}
-                              </p>
-                              <p className="text-slate-600 dark:text-slate-300 mb-6">{product.description}</p>
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="text-3xl sm:text-4xl font-extrabold text-secondary dark:text-white mb-4"
+                        >
+                            Our Product Suite
+                        </motion.h2>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="max-w-2xl mx-auto text-slate-600 dark:text-slate-300"
+                        >
+                            Comprehensive financial intelligence solutions designed for the modern enterprise
+                        </motion.p>
+                    </div>
 
-                              <ul className="space-y-3 mb-8">
-                                {product.features.map((feature, i) => (
-                                  <motion.li
-                                    key={i}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.3, delay: i * 0.1 }}
-                                    className="flex items-start"
-                                  >
-                                    <CheckCircle className="h-5 w-5 text-primary dark:text-accent mt-0.5 mr-3 flex-shrink-0" />
-                                    <span className="text-slate-700 dark:text-slate-300">{feature}</span>
-                                  </motion.li>
+                    <Tabs defaultValue="tax" value={activeProduct} onValueChange={setActiveProduct} className="w-full">
+                        <div className="flex justify-center mb-12">
+                            <TabsList className="flex">
+                                {products.map((product) => (
+                                    <TabsTrigger
+                                        key={product.id}
+                                        value={product.id}
+                                        className="flex items-center gap-2 px-4 py-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary/20 data-[state=active]:to-accent/20 dark:data-[state=active]:from-primary/30 dark:data-[state=active]:to-accent/30"
+                                    >
+                                        {product.icon}
+                                        <span className="hidden sm:inline">{product.name}</span>
+                                    </TabsTrigger>
                                 ))}
-                              </ul>
+                            </TabsList>
+                        </div>
 
-                              <Button
-                                className={`bg-gradient-to-r ${product.color} text-white hover:brightness-110 transition-all`}
-                                onClick={() => window.open(CALENDAR_URL, "_blank")}
-                              >
-                                <span className="flex items-center">
-                                  Schedule a Demo
-                                  <ChevronRight className="ml-1 h-4 w-4" />
-                                </span>
-                              </Button>
-                            </div>
+                        <div className="relative mb-10">
+                            {products.map((product) => (
+                                <TabsContent
+                                    key={product.id}
+                                    value={product.id}
+                                    className={`w-full ${activeProduct === product.id ? "block" : "hidden"}`}
+                                >
+                                    <AnimatePresence mode="wait">
+                                        <motion.div
+                                            key={product.id}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -20 }}
+                                            transition={{ duration: 0.5 }}
+                                            className="grid md:grid-cols-2 gap-8 items-center"
+                                        >
+                                            <div className="order-2 md:order-1">
+                                                <div className="flex items-center gap-3 mb-4">
+                                                    <div className={`p-2 rounded-lg bg-gradient-to-r ${product.color} text-white`}>
+                                                        {product.icon}
+                                                    </div>
+                                                    <h3 className="text-2xl sm:text-3xl font-bold text-secondary dark:text-white">
+                                                        {product.name}
+                                                    </h3>
+                                                </div>
+                                                <p className="text-lg sm:text-xl font-medium text-primary dark:text-accent mb-4">
+                                                    {product.tagline}
+                                                </p>
+                                                <p className="text-slate-600 dark:text-slate-300 mb-6">{product.description}</p>
 
-                            <motion.div
-                              initial={{ opacity: 0, scale: 0.9 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              transition={{ duration: 0.5 }}
-                              className="order-1 md:order-2 relative"
-                            >
-                              {product.id === "tax" ? (
-                                <div className="relative rounded-xl overflow-hidden shadow-2xl border-8 border-white dark:border-secondary">
-                                  <div className="h-[500px] overflow-hidden">
-                                    <TaxIntelligenceDashboard embedded={true} />
-                                  </div>
-                                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-transparent pointer-events-none" />
-                                </div>
-                              ) : (
-                                <div className="relative rounded-xl overflow-hidden shadow-2xl border-8 border-white dark:border-secondary aspect-[4/3]">
-                                  <img
-                                    src={product.image || "/placeholder.svg?height=600&width=800"}
-                                    alt={`${product.name} dashboard`}
-                                    className="w-full h-full object-cover"
-                                  />
-                                  <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent pointer-events-none" />
-                                </div>
-                              )}
+                                                <ul className="space-y-3 mb-8">
+                                                    {product.features.map((feature, i) => (
+                                                        <motion.li
+                                                            key={i}
+                                                            initial={{ opacity: 0, x: -20 }}
+                                                            animate={{ opacity: 1, x: 0 }}
+                                                            transition={{ duration: 0.3, delay: i * 0.1 }}
+                                                            className="flex items-start"
+                                                        >
+                                                            <CheckCircle className="h-5 w-5 text-primary dark:text-accent mt-0.5 mr-3 flex-shrink-0" />
+                                                            <span className="text-slate-700 dark:text-slate-300">{feature}</span>
+                                                        </motion.li>
+                                                    ))}
+                                                </ul>
 
-                              <motion.div
-                                animate={{
-                                  rotate: [0, 2, 0, -2, 0],
-                                  scale: [1, 1.02, 1, 1.02, 1],
-                                }}
-                                transition={{
-                                  duration: 8,
-                                  repeat: Number.POSITIVE_INFINITY,
-                                  repeatType: "reverse",
-                                }}
-                                className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full opacity-30 blur-xl"
-                              />
-                            </motion.div>
-                          </motion.div>
-                        </AnimatePresence>
-                      </TabsContent>
-                    ))}
-                  </div>
-                </Tabs>
-              </div>
+                                                <Button
+                                                    className={`bg-gradient-to-r ${product.color} text-white hover:brightness-110 transition-all`}
+                                                    onClick={() => window.open(CALENDAR_URL, "_blank")}
+                                                >
+                                                    <span className="flex items-center">
+                                                        Schedule a Demo
+                                                        <ChevronRight className="ml-1 h-4 w-4" />
+                                                    </span>
+                                                </Button>
+                                            </div>
+
+                                            <motion.div
+                                                initial={{ opacity: 0, scale: 0.9 }}
+                                                animate={{ opacity: 1, scale: 1 }}
+                                                transition={{ duration: 0.5 }}
+                                                className="order-1 md:order-2 relative"
+                                            >
+                                                {product.id === "tax" ? (
+                                                    <div className="relative rounded-xl overflow-hidden shadow-2xl border-8 border-white dark:border-secondary">
+                                                        <div className="h-[500px] overflow-hidden">
+                                                            <TaxIntelligenceDashboard embedded={true} />
+                                                        </div>
+                                                        <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-transparent pointer-events-none" />
+                                                    </div>
+                                                ) : product.id === "revenue" ? (
+                                                    <div className="relative rounded-xl overflow-hidden shadow-2xl border-8 border-white dark:border-secondary">
+                                                        <div className="h-[500px] overflow-hidden">
+                                                            <RevenueRecognitionDashboard embedded={true} />
+                                                        </div>
+                                                        <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-transparent pointer-events-none" />
+                                                    </div>
+                                                ) : product.id === "leases" ? (
+                                                    <div className="relative rounded-xl overflow-hidden shadow-2xl border-8 border-white dark:border-secondary">
+                                                        <div className="h-[500px] overflow-hidden">
+                                                            <LeasesManagementDashboard embedded={true} />
+                                                        </div>
+                                                        <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-transparent pointer-events-none" />
+                                                    </div>
+                                                ) : (
+                                                    <div className="relative rounded-xl overflow-hidden shadow-2xl border-8 border-white dark:border-secondary aspect-[4/3]">
+                                                        <img
+                                                            src={product.image || "/placeholder.svg?height=600&width=800"}
+                                                            alt={`${product.name} dashboard`}
+                                                            className="w-full h-full object-cover"
+                                                        />
+                                                        <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent pointer-events-none" />
+                                                    </div>
+                                                )}
+
+                                                <motion.div
+                                                    animate={{
+                                                        rotate: [0, 2, 0, -2, 0],
+                                                        scale: [1, 1.02, 1, 1.02, 1],
+                                                    }}
+                                                    transition={{
+                                                        duration: 8,
+                                                        repeat: Number.POSITIVE_INFINITY,
+                                                        repeatType: "reverse",
+                                                    }}
+                                                    className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full opacity-30 blur-xl"
+                                                />
+                                            </motion.div>
+                                        </motion.div>
+                                    </AnimatePresence>
+                                </TabsContent>
+                            ))}
+                        </div>
+                    </Tabs>
+                </div>
             </section>
 
             {/* ------------------------------------------------------------------ PLATFORM BENEFITS */}
-            <section id="platform" className="relative py-16 sm:py-24 px-4 sm:px-6 overflow-hidden pt-12 mt-12">
+            <section id="platform" className="relative py-16 sm:py-24 px-4 sm:px-6 overflow-hidden pt-10 mt-10">
                 <motion.div
                     aria-hidden
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -1192,9 +1210,23 @@ export default function PentagramLandingPage() {
             </section>
 
             {/* ------------------------------------------------------------------ COMPANY */}
-            <section id="company" className="py-16 sm:py-24 px-4 sm:px-6">
+            <section
+                id="company"
+                className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-b from-white to-slate-50 dark:from-secondary dark:to-secondary/95"
+            >
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="inline-block mb-4"
+                        >
+                            <div className="bg-primary/10 dark:bg-primary/20 px-4 py-1 rounded-full">
+                                <span className="text-primary dark:text-primary-foreground font-medium">Our Team</span>
+                            </div>
+                        </motion.div>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -1211,76 +1243,159 @@ export default function PentagramLandingPage() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="max-w-2xl mx-auto text-slate-600 dark:text-slate-300"
                         >
-                            Founded by top‑tier financial experts and, Numio is on a mission to transform financial operations
+                            Founded by top‑tier financial experts, Numio is on a mission to transform financial operations
                         </motion.p>
                     </div>
 
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6 }}
-                                className="text-slate-700 dark:text-slate-300 leading-relaxed mb-8"
+                    <div className="grid lg:grid-cols-12 gap-8 items-center">
+                        {/* Left column - Vision */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="lg:col-span-5 bg-white dark:bg-secondary/60 p-8 rounded-2xl shadow-lg"
+                        >
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="p-2 rounded-lg bg-gradient-to-r from-primary to-accent text-white">
+                                    <PentagramLogo size="32" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-secondary dark:text-white">Our Mission</h3>
+                            </div>
+
+                            <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+                                Founded by top‑tier tax strategists, visionaries and accountants, Numio is on a mission to blend
+                                rigorous compliance with fintech agility – empowering organisations to move faster, smarter, and
+                                fearlessly.
+                            </p>
+
+                            <div className="space-y-4 mb-8">
+                                {[
+                                    { title: "Innovation", description: "Pioneering AI-driven financial intelligence solutions" },
+                                    { title: "Compliance", description: "Ensuring regulatory adherence across global jurisdictions" },
+                                    {
+                                        title: "Efficiency",
+                                        description: "Streamlining complex financial processes for maximum productivity",
+                                    },
+                                ].map((value, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial={{ opacity: 0, y: 10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: i * 0.1 }}
+                                        className="flex gap-3"
+                                    >
+                                        <div className="rounded-full bg-primary/10 dark:bg-primary/20 p-1 h-6 w-6 flex items-center justify-center mt-0.5">
+                                            <CheckCircle className="h-4 w-4 text-primary" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-medium text-secondary dark:text-white">{value.title}</h4>
+                                            <p className="text-sm text-slate-600 dark:text-slate-400">{value.description}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+
+                            <Button
+                                variant="outline"
+                                className="border-primary text-primary hover:bg-primary hover:text-white"
+                                onClick={() => window.open(CALENDAR_URL, "_blank")}
                             >
-                                Founded by top‑tier tax strategists, Visionaries and Accountants, Numio is on a mission to blend
-                                rigorous compliance with fintech agility – empowering organisations to move faster, smarter, fearlessly.
-                            </motion.p>
-                            <ul className="space-y-6">
+                                Join Our Journey
+                            </Button>
+                        </motion.div>
+
+                        {/* Right column - Leadership */}
+                        <div className="lg:col-span-7">
+                            <div className="grid md:grid-cols-2 gap-6">
                                 {[
                                     {
                                         name: "Aviv Ben Simchon",
                                         role: "CEO & Financial Visionary",
                                         bio: "Senior manager at big4 in indirect tax, guiding product strategy & regulatory alignment. Member at the Tax Committee, Institute of CPAs in Israel; Leading national e-Invoicing implementation with ITA. ex-ITA",
                                         img: "/ABS.jpeg",
+                                        color: "from-primary to-accent",
                                     },
                                     {
                                         name: "Almog Dror",
                                         role: "COO & Operations Strategist",
-                                        bio: "Accounting Tools & Automation Developer, Data Analyst and Accountant.",
+                                        bio: "Accounting Tools & Automation Developer, Data Analyst and Accountant with expertise in capital markets and programming in various fields.",
                                         img: "/almog-dror.jpeg",
+                                        color: "from-purple-600 to-pink-500",
                                     },
                                     {
                                         name: "Yuval Chen",
                                         role: "CTO & Technology Lead",
-                                        bio: "Full Stack Developer & Automation Developer With Expertise in Financial Markets.",
-                                        img: "/yuval-chen.png",
+                                        bio: "Full Stack Developer & Automation Developer With Expertise in Financial Markets and AI integration for financial systems.",
+                                        img: "/YuvalChen.jpeg",
+                                        color: "from-emerald-500 to-teal-400",
                                     },
-                                ].map((f, i) => (
-                                    <motion.li
-                                        key={f.name}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
+                                    {
+                                        name: "Join Our Team",
+                                        role: "Open Positions",
+                                        bio: "We're looking for talented individuals passionate about financial technology and innovation to join our growing team.",
+                                        img: "/placeholder.svg?height=200&width=200",
+                                        color: "from-amber-500 to-orange-400",
+                                        isPlaceholder: true,
+                                    },
+                                ].map((member, i) => (
+                                    <motion.div
+                                        key={member.name}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
-                                        transition={{ duration: 0.5, delay: i * 0.2 }}
-                                        className="flex items-start"
+                                        transition={{ duration: 0.5, delay: i * 0.1 }}
+                                        className="bg-white dark:bg-secondary/60 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
                                     >
-                                        <div className="relative mr-6">
-                                            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary dark:border-accent flex items-center justify-center bg-white">
-                                                <img src={f.img || "/placeholder.svg"} alt={f.name} className="w-full h-full object-cover" />
+                                        <div className={`h-3 bg-gradient-to-r ${member.color}`}></div>
+                                        <div className="p-6">
+                                            <div className="flex items-center gap-4 mb-4">
+                                                <div className="relative">
+                                                    <div
+                                                        className={`w-16 h-16 rounded-full overflow-hidden border-2 border-gradient-to-r ${member.color} flex items-center justify-center bg-white`}
+                                                    >
+                                                        {member.isPlaceholder ? (
+                                                            <Sparkles className="h-8 w-8 text-amber-500" />
+                                                        ) : (
+                                                            <img
+                                                                src={member.img || "/placeholder.svg"}
+                                                                alt={member.name}
+                                                                className="w-full h-full object-cover"
+                                                            />
+                                                        )}
+                                                    </div>
+                                                    {!member.isPlaceholder && (
+                                                        <div className="absolute -bottom-1 -right-1 bg-white dark:bg-secondary rounded-full p-0.5">
+                                                            <PentagramLogo size="16" />
+                                                        </div>
+                                                    )}
+                                                </div>
+                                                <div>
+                                                    <h4 className="font-semibold text-secondary dark:text-white text-lg">{member.name}</h4>
+                                                    <p
+                                                        className={`text-xs ${member.isPlaceholder ? "text-amber-500" : "text-highlight dark:text-accent"}`}
+                                                    >
+                                                        {member.role}
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <PentagramLogo className="absolute -bottom-2 -right-2" size="16" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-semibold text-secondary dark:text-white text-lg">{f.name}</h4>
-                                            <p className="text-sm text-highlight dark:text-accent mb-1">{f.role}</p>
-                                            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">{f.bio}</p>
-                                        </div>
-                                    </motion.li>
-                                ))}
-                            </ul>
-                        </div>
+                                            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">{member.bio}</p>
 
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7 }}
-                            className="relative"
-                        >
-                            <img src="/team_collage.jpg" alt="Team working" className="rounded-3xl shadow-2xl" />
-                        </motion.div>
+                                            {member.isPlaceholder && (
+                                                <Button
+                                                    variant="outline"
+                                                    size="sm"
+                                                    className="mt-4 w-full border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white"
+                                                >
+                                                    View Careers
+                                                </Button>
+                                            )}
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
