@@ -774,7 +774,8 @@ export default function PentagramLandingPage() {
                     initial={{ opacity: 0, y: 60 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, ease: "easeOut" }}
-                    className="text-4xl sm:text-5xl md:text-7xl font-extrabold max-w-4xl leading-tight bg-gradient-to-r from-primary via-accent to-highlight bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.07)] px-4 mb-8"
+                    className="text-4xl sm:text-5xl md:text-7xl font-extrabold max-w-4xl leading-[1.2] bg-gradient-to-r from-primary via-accent to-highlight bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.07)] px-4 mb-8"
+                    style={{ lineHeight: "1.3" }}
                 >
                     Financial Intelligence.
                     <br />
@@ -968,15 +969,72 @@ export default function PentagramLandingPage() {
                                                         <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-transparent pointer-events-none" />
                                                     </div>
                                                 ) : (
-                                                    <div className="relative rounded-xl overflow-hidden shadow-2xl border-8 border-white dark:border-secondary aspect-[4/3]">
-                                                        <img
-                                                            src={product.image || "/placeholder.svg?height=600&width=800"}
-                                                            alt={`${product.name} dashboard`}
-                                                            className="w-full h-full object-cover"
-                                                        />
-                                                        <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent pointer-events-none" />
-                                                    </div>
+                                                    (product.id === "future" && (
+                                                        <div className="relative rounded-xl overflow-hidden shadow-2xl border-8 border-white dark:border-secondary">
+                                                            <div className="h-[500px] overflow-hidden bg-gradient-to-br from-amber-500/5 to-orange-400/5 flex items-center justify-center">
+                                                                <div className="text-center p-8 max-w-md">
+                                                                    <div className="mb-10 flex justify-center">
+                                                                        <div className="relative">
+                                                                            <Sparkles className="h-20 w-20 text-amber-500" />
+                                                                            <motion.div
+                                                                                animate={{
+                                                                                    scale: [1, 1.2, 1],
+                                                                                    opacity: [0.3, 0.7, 0.3],
+                                                                                }}
+                                                                                transition={{
+                                                                                    duration: 4,
+                                                                                    repeat: Number.POSITIVE_INFINITY,
+                                                                                    repeatType: "reverse",
+                                                                                }}
+                                                                                className="absolute inset-0 bg-amber-500/20 rounded-full blur-xl"
+                                                                            />
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-orange-400 bg-clip-text text-transparent">
+                                                                        Coming Soon
+                                                                    </h3>
+
+                                                                    <div className="h-px w-24 mx-auto bg-gradient-to-r from-amber-500 to-orange-400 mb-6"></div>
+
+                                                                    <p className="text-slate-600 dark:text-slate-300 mb-8 text-lg">
+                                                                        Our next-generation financial intelligence platform is currently in development.
+                                                                    </p>
+
+                                                                    <div className="flex justify-center gap-3 mb-8">
+                                                                        {["Q4", "2025"].map((text, i) => (
+                                                                            <motion.div
+                                                                                key={i}
+                                                                                initial={{ opacity: 0 }}
+                                                                                animate={{ opacity: 1 }}
+                                                                                transition={{ delay: 0.5 + i * 0.2 }}
+                                                                                className="w-16 h-16 rounded-lg bg-white dark:bg-slate-800/50 shadow-md flex items-center justify-center"
+                                                                            >
+                                                                                <span className="text-xl font-bold text-amber-500">{text}</span>
+                                                                            </motion.div>
+                                                                        ))}
+                                                                    </div>
+
+                                                                    <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 border-0">
+                                                                        Be the first to know
+                                                                    </Badge>
+                                                                </div>
+                                                            </div>
+                                                            <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-transparent pointer-events-none" />
+                                                        </div>
+                                                    )) || (
+                                                        <div className="relative rounded-xl overflow-hidden shadow-2xl border-8 border-white dark:border-secondary aspect-[4/3]">
+                                                            <img
+                                                                src={product.image || "/placeholder.svg?height=600&width=800"}
+                                                                alt={`${product.name} dashboard`}
+                                                                className="w-full h-full object-cover"
+                                                            />
+                                                            <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent pointer-events-none" />
+                                                        </div>
+                                                    )
                                                 )}
+
+
 
                                                 <motion.div
                                                     animate={{
