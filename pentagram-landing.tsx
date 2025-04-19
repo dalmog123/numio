@@ -1315,9 +1315,9 @@ export default function PentagramLandingPage() {
                             className="lg:col-span-5 bg-white dark:bg-secondary/60 p-8 rounded-2xl shadow-lg"
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2 rounded-lg bg-gradient-to-r from-primary to-accent text-white">
+                                {<div className="p-2 rounded-lg bg-gradient-to-r from-primary to-accent text-white">
                                     <PentagramLogo size="32" />
-                                </div>
+                                </div>}
                                 <h3 className="text-2xl font-bold text-secondary dark:text-white">Our Mission</h3>
                             </div>
 

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import AnimatedFavicon from '@/components/AnimatedFavicon'
 
 export const metadata: Metadata = {
   title: 'Numio Solutions',
   description: 'Financial Intelligence, Reimagined.',
-  //generator: 'v0.dev',
 }
 
 export default function RootLayout({
@@ -14,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AnimatedFavicon />
+        {children}
+      </body>
     </html>
   )
 }
