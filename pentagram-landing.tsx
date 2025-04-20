@@ -42,10 +42,10 @@ const products = [
         description:
             "Our flagship solution elevates tax compliance from a burden to a competitive edge with real-time monitoring, fraud detection, and predictive analytics.",
         features: [
-            "Real-time VAT heatmap with ML risk scoring",
-            "Invoice integrity AI for fraud & error detection",
+            "Real-time VAT risks heatmap",
+            "Invoice integrity for fraud & error detection",
             "Predictive audit radar for regulatory compliance",
-            "Automated schema validation & duplicate detection",
+            "Automated schema validation",
         ],
         color: "from-primary to-accent",
         image: "/tax-dashboard.jpg",
@@ -56,9 +56,9 @@ const products = [
         icon: <FileText className="h-6 w-6" />,
         tagline: "Streamline complex revenue recognition workflows",
         description:
-            "Automate revenue recognition across multiple contract types, performance obligations, and variable considerations with precision and compliance.",
+            "Automate revenue recognition across multiple contract types, performance obligations, and variable considerations with precision.",
         features: [
-            "ASC 606 & IFRS 15 compliant recognition engine",
+            "ASC 606 & IFRS 15 compliant recognition",
             "Standalone selling price analysis",
             "Contract modification tracking & versioning",
         ],
@@ -69,14 +69,13 @@ const products = [
         id: "leases",
         name: "Leases Management",
         icon: <Building className="h-6 w-6" />,
-        tagline: "Simplify lease accounting and management",
+        tagline: "Simplify lease accounting and compliance",
         description:
-            "Comprehensive lease accounting solution that ensures IFRS 16 & ASC 842 compliance while providing powerful analytics for portfolio optimization.",
+            "Comprehensive lease accounting solution that ensures IFRS 16 & ASC 842 compliance.",
         features: [
             "Automated lease classification & measurement",
             "Dynamic lease modification handling",
             "Integrated impairment testing",
-            "Portfolio-level analytics & optimization",
         ],
         color: "from-emerald-500 to-teal-400",
         image: "/leases-dashboard.jpg",
@@ -89,10 +88,10 @@ const products = [
         description:
             "Our R&D team is developing next-generation solutions to address emerging financial challenges with cutting-edge AI and machine learning technologies.",
         features: [
-            "Predictive cash flow optimization",
-            "Autonomous financial close acceleration",
-            "Cross-border transaction harmonization",
-            "Regulatory change impact simulation",
+            // "Predictive cash flow optimization",
+            // "Autonomous financial close acceleration",
+            // "Cross-border transaction harmonization",
+            // "Regulatory change impact simulation",
         ],
         color: "from-amber-500 to-orange-400",
         image: "/future-concept.jpg",
@@ -371,7 +370,7 @@ const DataProcessingAnimation = ({ className = "" }) => (
             Real-Time Financial Data Processing
         </text>
         <text x="400" y="55" textAnchor="middle" fontSize="14" fill="#64748b">
-            Transforming complex data into actionable insights
+            Transforming your complex financial data into actionable insights
         </text>
 
         {/* Data source labels */}
@@ -412,277 +411,277 @@ const DataProcessingAnimation = ({ className = "" }) => (
 )
 
 // Team Collaboration Visualization
-const TeamCollaborationVisualization = ({ className = "" }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" className={`w-full h-auto drop-shadow-xl ${className}`}>
-        <defs>
-            <linearGradient id="teamGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#2563eb" stopOpacity="0.05" />
-                <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.08" />
-                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.05" />
-            </linearGradient>
-            <linearGradient id="pentaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#2563eb" />
-                <stop offset="50%" stopColor="#8b5cf6" />
-                <stop offset="100%" stopColor="#06b6d4" />
-            </linearGradient>
-            <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#2563eb" stopOpacity="0.7" />
-                <stop offset="100%" stopColor="#2563eb" stopOpacity="0.1" />
-            </linearGradient>
-            <linearGradient id="chartGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.7" />
-                <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.1" />
-            </linearGradient>
-            <linearGradient id="chartGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.7" />
-                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.1" />
-            </linearGradient>
-        </defs>
+// const TeamCollaborationVisualization = ({ className = "" }) => (
+//     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" className={`w-full h-auto drop-shadow-xl ${className}`}>
+//         <defs>
+//             <linearGradient id="teamGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+//                 <stop offset="0%" stopColor="#2563eb" stopOpacity="0.05" />
+//                 <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.08" />
+//                 <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.05" />
+//             </linearGradient>
+//             <linearGradient id="pentaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+//                 <stop offset="0%" stopColor="#2563eb" />
+//                 <stop offset="50%" stopColor="#8b5cf6" />
+//                 <stop offset="100%" stopColor="#06b6d4" />
+//             </linearGradient>
+//             <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+//                 <stop offset="0%" stopColor="#2563eb" stopOpacity="0.7" />
+//                 <stop offset="100%" stopColor="#2563eb" stopOpacity="0.1" />
+//             </linearGradient>
+//             <linearGradient id="chartGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+//                 <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.7" />
+//                 <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.1" />
+//             </linearGradient>
+//             <linearGradient id="chartGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+//                 <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.7" />
+//                 <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.1" />
+//             </linearGradient>
+//         </defs>
 
-        {/* Background */}
-        <rect x="0" y="0" width="800" height="400" fill="url(#teamGradient)" rx="20" />
+//         {/* Background */}
+//         <rect x="0" y="0" width="800" height="400" fill="url(#teamGradient)" rx="20" />
 
-        {/* Central Pentagram logo with rotation - properly centered and scaled */}
-        <g transform="translate(400, 200)">
-            <circle cx="0" cy="0" r="60" fill="white" stroke="url(#pentaGradient)" strokeWidth="3" />
-            <polygon
-                points="0,-45 42.8,-13.9 26.5,35.3 -26.5,35.3 -42.8,-13.9"
-                fill="none"
-                stroke="url(#pentaGradient)"
-                strokeWidth="3"
-            >
-                <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    from="0"
-                    to="360"
-                    dur="20s"
-                    repeatCount="indefinite"
-                />
-            </polygon>
-        </g>
+//         {/* Central Pentagram logo with rotation - properly centered and scaled */}
+//         <g transform="translate(400, 200)">
+//             <circle cx="0" cy="0" r="60" fill="white" stroke="url(#pentaGradient)" strokeWidth="3" />
+//             <polygon
+//                 points="0,-45 42.8,-13.9 26.5,35.3 -26.5,35.3 -42.8,-13.9"
+//                 fill="none"
+//                 stroke="url(#pentaGradient)"
+//                 strokeWidth="3"
+//             >
+//                 <animateTransform
+//                     attributeName="transform"
+//                     type="rotate"
+//                     from="0"
+//                     to="360"
+//                     dur="20s"
+//                     repeatCount="indefinite"
+//                 />
+//             </polygon>
+//         </g>
 
-        {/* Team members with pulsing effect */}
-        <g>
-            {/* Team member 1 - Financial Expert */}
-            <circle cx="200" cy="150" r="50" fill="white" stroke="#2563eb" strokeWidth="2">
-                <animate attributeName="r" values="50; 52; 50" dur="3s" repeatCount="indefinite" />
-            </circle>
-            <g transform="translate(200, 150)">
-                <text x="0" y="-8" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#2563eb">
-                    Financial
-                </text>
-                <text x="0" y="12" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#2563eb">
-                    Expert
-                </text>
-            </g>
+//         Team members with pulsing effect
+//         <g>
+//             {/* Team member 1 - Financial Expert */}
+//             <circle cx="200" cy="150" r="50" fill="white" stroke="#2563eb" strokeWidth="2">
+//                 <animate attributeName="r" values="50; 52; 50" dur="3s" repeatCount="indefinite" />
+//             </circle>
+//             <g transform="translate(200, 150)">
+//                 <text x="0" y="-8" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#2563eb">
+//                     Financial
+//                 </text>
+//                 <text x="0" y="12" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#2563eb">
+//                     Expert
+//                 </text>
+//             </g>
 
-            {/* Connection line with moving dots */}
-            <line x1="250" y1="150" x2="320" y2="200" stroke="#2563eb" strokeWidth="2" strokeDasharray="5,5">
-                <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1s" repeatCount="indefinite" />
-            </line>
-            <circle cx="0" cy="0" r="3" fill="#2563eb">
-                <animateMotion path="M250,150 L320,200" dur="2s" repeatCount="indefinite" />
-            </circle>
+//             {/* Connection line with moving dots */}
+//             <line x1="250" y1="150" x2="320" y2="200" stroke="#2563eb" strokeWidth="2" strokeDasharray="5,5">
+//                 <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1s" repeatCount="indefinite" />
+//             </line>
+//             <circle cx="0" cy="0" r="3" fill="#2563eb">
+//                 <animateMotion path="M250,150 L320,200" dur="2s" repeatCount="indefinite" />
+//             </circle>
 
-            {/* Team member 2 - Tax Strategist */}
-            <circle cx="200" cy="280" r="50" fill="white" stroke="#8b5cf6" strokeWidth="2">
-                <animate attributeName="r" values="50; 52; 50" dur="3s" begin="0.5s" repeatCount="indefinite" />
-            </circle>
-            <g transform="translate(200, 280)">
-                <text x="0" y="-8" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#8b5cf6">
-                    Tax
-                </text>
-                <text x="0" y="12" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#8b5cf6">
-                    Strategist
-                </text>
-            </g>
+//             {/* Team member 2 - Tax Strategist */}
+//             <circle cx="200" cy="280" r="50" fill="white" stroke="#8b5cf6" strokeWidth="2">
+//                 <animate attributeName="r" values="50; 52; 50" dur="3s" begin="0.5s" repeatCount="indefinite" />
+//             </circle>
+//             <g transform="translate(200, 280)">
+//                 <text x="0" y="-8" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#8b5cf6">
+//                     Tax
+//                 </text>
+//                 <text x="0" y="12" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#8b5cf6">
+//                     Strategist
+//                 </text>
+//             </g>
 
-            {/* Connection line with moving dots */}
-            <line x1="250" y1="280" x2="320" y2="200" stroke="#8b5cf6" strokeWidth="2" strokeDasharray="5,5">
-                <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1s" repeatCount="indefinite" />
-            </line>
-            <circle cx="0" cy="0" r="3" fill="#8b5cf6">
-                <animateMotion path="M250,280 L320,200" dur="2s" repeatCount="indefinite" />
-            </circle>
+//             {/* Connection line with moving dots */}
+//             <line x1="250" y1="280" x2="320" y2="200" stroke="#8b5cf6" strokeWidth="2" strokeDasharray="5,5">
+//                 <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1s" repeatCount="indefinite" />
+//             </line>
+//             <circle cx="0" cy="0" r="3" fill="#8b5cf6">
+//                 <animateMotion path="M250,280 L320,200" dur="2s" repeatCount="indefinite" />
+//             </circle>
 
-            {/* Team member 3 - Tech Innovator */}
-            <circle cx="600" cy="150" r="50" fill="white" stroke="#06b6d4" strokeWidth="2">
-                <animate attributeName="r" values="50; 52; 50" dur="3s" begin="1s" repeatCount="indefinite" />
-            </circle>
-            <g transform="translate(600, 150)">
-                <text x="0" y="-8" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#06b6d4">
-                    Tech
-                </text>
-                <text x="0" y="12" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#06b6d4">
-                    Innovator
-                </text>
-            </g>
+//             {/* Team member 3 - Tech Innovator */}
+//             <circle cx="600" cy="150" r="50" fill="white" stroke="#06b6d4" strokeWidth="2">
+//                 <animate attributeName="r" values="50; 52; 50" dur="3s" begin="1s" repeatCount="indefinite" />
+//             </circle>
+//             <g transform="translate(600, 150)">
+//                 <text x="0" y="-8" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#06b6d4">
+//                     Tech
+//                 </text>
+//                 <text x="0" y="12" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#06b6d4">
+//                     Innovator
+//                 </text>
+//             </g>
 
-            {/* Connection line with moving dots */}
-            <line x1="550" y1="150" x2="480" y2="200" stroke="#06b6d4" strokeWidth="2" strokeDasharray="5,5">
-                <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1s" repeatCount="indefinite" />
-            </line>
-            <circle cx="0" cy="0" r="3" fill="#06b6d4">
-                <animateMotion path="M550,150 L480,200" dur="2s" repeatCount="indefinite" />
-            </circle>
+//             {/* Connection line with moving dots */}
+//             <line x1="550" y1="150" x2="480" y2="200" stroke="#06b6d4" strokeWidth="2" strokeDasharray="5,5">
+//                 <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1s" repeatCount="indefinite" />
+//             </line>
+//             <circle cx="0" cy="0" r="3" fill="#06b6d4">
+//                 <animateMotion path="M550,150 L480,200" dur="2s" repeatCount="indefinite" />
+//             </circle>
 
-            {/* Team member 4 - Data Scientist */}
-            <circle cx="600" cy="280" r="50" fill="white" stroke="#facc15" strokeWidth="2">
-                <animate attributeName="r" values="50; 52; 50" dur="3s" begin="1.5s" repeatCount="indefinite" />
-            </circle>
-            <g transform="translate(600, 280)">
-                <text x="0" y="-8" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#facc15">
-                    Data
-                </text>
-                <text x="0" y="12" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#facc15">
-                    Scientist
-                </text>
-            </g>
+//             {/* Team member 4 - Data Scientist */}
+//             <circle cx="600" cy="280" r="50" fill="white" stroke="#facc15" strokeWidth="2">
+//                 <animate attributeName="r" values="50; 52; 50" dur="3s" begin="1.5s" repeatCount="indefinite" />
+//             </circle>
+//             <g transform="translate(600, 280)">
+//                 <text x="0" y="-8" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#facc15">
+//                     Data
+//                 </text>
+//                 <text x="0" y="12" textAnchor="middle" dominantBaseline="middle" fontSize="12" fontWeight="bold" fill="#facc15">
+//                     Scientist
+//                 </text>
+//             </g>
 
-            {/* Connection line with moving dots */}
-            <line x1="550" y1="280" x2="480" y2="200" stroke="#facc15" strokeWidth="2" strokeDasharray="5,5">
-                <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1s" repeatCount="indefinite" />
-            </line>
-            <circle cx="0" cy="0" r="3" fill="#facc15">
-                <animateMotion path="M550,280 L480,200" dur="2s" repeatCount="indefinite" />
-            </circle>
-        </g>
+//             {/* Connection line with moving dots */}
+//             <line x1="550" y1="280" x2="480" y2="200" stroke="#facc15" strokeWidth="2" strokeDasharray="5,5">
+//                 <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1s" repeatCount="indefinite" />
+//             </line>
+//             <circle cx="0" cy="0" r="3" fill="#facc15">
+//                 <animateMotion path="M550,280 L480,200" dur="2s" repeatCount="indefinite" />
+//             </circle>
+//         </g>
 
-        {/* Rest of the SVG content remains unchanged */}
-        {/* Data visualization elements with animations */}
-        <g transform="translate(300, 80)">
-            {/* Bar chart with growing bars */}
-            <rect x="0" y="40" width="15" height="0" fill="url(#chartGradient)" rx="2">
-                <animate attributeName="height" from="0" to="40" dur="1.5s" begin="0.5s" fill="freeze" />
-                <animate attributeName="y" from="40" to="0" dur="1.5s" begin="0.5s" fill="freeze" />
-            </rect>
-            <rect x="20" y="40" width="15" height="0" fill="url(#chartGradient)" rx="2">
-                <animate attributeName="height" from="0" to="30" dur="1.5s" begin="0.7s" fill="freeze" />
-                <animate attributeName="y" from="40" to="10" dur="1.5s" begin="0.7s" fill="freeze" />
-            </rect>
-            <rect x="40" y="40" width="15" height="0" fill="url(#chartGradient)" rx="2">
-                <animate attributeName="height" from="0" to="35" dur="1.5s" begin="0.9s" fill="freeze" />
-                <animate attributeName="y" from="40" to="5" dur="1.5s" begin="0.9s" fill="freeze" />
-            </rect>
-        </g>
+//         {/* Rest of the SVG content remains unchanged */}
+//         {/* Data visualization elements with animations */}
+//         <g transform="translate(300, 80)">
+//             {/* Bar chart with growing bars */}
+//             <rect x="0" y="40" width="15" height="0" fill="url(#chartGradient)" rx="2">
+//                 <animate attributeName="height" from="0" to="40" dur="1.5s" begin="0.5s" fill="freeze" />
+//                 <animate attributeName="y" from="40" to="0" dur="1.5s" begin="0.5s" fill="freeze" />
+//             </rect>
+//             <rect x="20" y="40" width="15" height="0" fill="url(#chartGradient)" rx="2">
+//                 <animate attributeName="height" from="0" to="30" dur="1.5s" begin="0.7s" fill="freeze" />
+//                 <animate attributeName="y" from="40" to="10" dur="1.5s" begin="0.7s" fill="freeze" />
+//             </rect>
+//             <rect x="40" y="40" width="15" height="0" fill="url(#chartGradient)" rx="2">
+//                 <animate attributeName="height" from="0" to="35" dur="1.5s" begin="0.9s" fill="freeze" />
+//                 <animate attributeName="y" from="40" to="5" dur="1.5s" begin="0.9s" fill="freeze" />
+//             </rect>
+//         </g>
 
-        <g transform="translate(480, 80)">
-            {/* Line chart with drawing effect */}
-            <path d="M0,30 L0,30" fill="none" stroke="#06b6d4" strokeWidth="2">
-                <animate
-                    attributeName="d"
-                    from="M0,30 L0,30"
-                    to="M0,30 L20,15 L40,25 L60,5"
-                    dur="2s"
-                    begin="1s"
-                    fill="freeze"
-                />
-            </path>
-            <circle cx="0" cy="30" r="3" fill="#06b6d4" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1s" fill="freeze" />
-            </circle>
-            <circle cx="20" cy="15" r="3" fill="#06b6d4" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.3s" fill="freeze" />
-            </circle>
-            <circle cx="40" cy="25" r="3" fill="#06b6d4" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.6s" fill="freeze" />
-            </circle>
-            <circle cx="60" cy="5" r="3" fill="#06b6d4" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.9s" fill="freeze" />
-            </circle>
-        </g>
+//         <g transform="translate(480, 80)">
+//             {/* Line chart with drawing effect */}
+//             <path d="M0,30 L0,30" fill="none" stroke="#06b6d4" strokeWidth="2">
+//                 <animate
+//                     attributeName="d"
+//                     from="M0,30 L0,30"
+//                     to="M0,30 L20,15 L40,25 L60,5"
+//                     dur="2s"
+//                     begin="1s"
+//                     fill="freeze"
+//                 />
+//             </path>
+//             <circle cx="0" cy="30" r="3" fill="#06b6d4" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1s" fill="freeze" />
+//             </circle>
+//             <circle cx="20" cy="15" r="3" fill="#06b6d4" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.3s" fill="freeze" />
+//             </circle>
+//             <circle cx="40" cy="25" r="3" fill="#06b6d4" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.6s" fill="freeze" />
+//             </circle>
+//             <circle cx="60" cy="5" r="3" fill="#06b6d4" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.9s" fill="freeze" />
+//             </circle>
+//         </g>
 
-        <g transform="translate(300, 280)">
-            {/* Pie chart with slice animations */}
-            <path d="M30,30 L30,0 A30,30 0 0,1 60,30 Z" fill="#8b5cf6" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.2s" fill="freeze" />
-            </path>
-            <path d="M30,30 L60,30 A30,30 0 0,1 30,60 Z" fill="#2563eb" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.4s" fill="freeze" />
-            </path>
-            <path d="M30,30 L30,60 A30,30 0 0,1 0,30 Z" fill="#06b6d4" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.6s" fill="freeze" />
-            </path>
-            <path d="M30,30 L0,30 A30,30 0 0,1 30,0 Z" fill="#facc15" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.8s" fill="freeze" />
-            </path>
-        </g>
+//         <g transform="translate(300, 280)">
+//             {/* Pie chart with slice animations */}
+//             <path d="M30,30 L30,0 A30,30 0 0,1 60,30 Z" fill="#8b5cf6" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.2s" fill="freeze" />
+//             </path>
+//             <path d="M30,30 L60,30 A30,30 0 0,1 30,60 Z" fill="#2563eb" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.4s" fill="freeze" />
+//             </path>
+//             <path d="M30,30 L30,60 A30,30 0 0,1 0,30 Z" fill="#06b6d4" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.6s" fill="freeze" />
+//             </path>
+//             <path d="M30,30 L0,30 A30,30 0 0,1 30,0 Z" fill="#facc15" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.8s" fill="freeze" />
+//             </path>
+//         </g>
 
-        {/* Document icons with staggered appearance */}
-        <g transform="translate(480, 280)">
-            <rect x="0" y="0" width="30" height="40" fill="white" stroke="#2563eb" strokeWidth="1" rx="2" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2s" fill="freeze" />
-            </rect>
-            <line x1="5" y1="10" x2="25" y2="10" stroke="#2563eb" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.1s" fill="freeze" />
-            </line>
-            <line x1="5" y1="15" x2="25" y2="15" stroke="#2563eb" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.2s" fill="freeze" />
-            </line>
-            <line x1="5" y1="20" x2="25" y2="20" stroke="#2563eb" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.3s" fill="freeze" />
-            </line>
-            <line x1="5" y1="25" x2="15" y2="25" stroke="#2563eb" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.4s" fill="freeze" />
-            </line>
+//         {/* Document icons with staggered appearance */}
+//         <g transform="translate(480, 280)">
+//             <rect x="0" y="0" width="30" height="40" fill="white" stroke="#2563eb" strokeWidth="1" rx="2" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2s" fill="freeze" />
+//             </rect>
+//             <line x1="5" y1="10" x2="25" y2="10" stroke="#2563eb" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.1s" fill="freeze" />
+//             </line>
+//             <line x1="5" y1="15" x2="25" y2="15" stroke="#2563eb" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.2s" fill="freeze" />
+//             </line>
+//             <line x1="5" y1="20" x2="25" y2="20" stroke="#2563eb" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.3s" fill="freeze" />
+//             </line>
+//             <line x1="5" y1="25" x2="15" y2="25" stroke="#2563eb" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.4s" fill="freeze" />
+//             </line>
 
-            <rect x="10" y="5" width="30" height="40" fill="white" stroke="#8b5cf6" strokeWidth="1" rx="2" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.2s" fill="freeze" />
-            </rect>
-            <line x1="15" y1="15" x2="35" y2="15" stroke="#8b5cf6" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.3s" fill="freeze" />
-            </line>
-            <line x1="15" y1="20" x2="35" y2="20" stroke="#8b5cf6" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.4s" fill="freeze" />
-            </line>
-            <line x1="15" y1="25" x2="35" y2="25" stroke="#8b5cf6" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.5s" fill="freeze" />
-            </line>
-            <line x1="15" y1="30" x2="25" y2="30" stroke="#8b5cf6" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.6s" fill="freeze" />
-            </line>
+//             <rect x="10" y="5" width="30" height="40" fill="white" stroke="#8b5cf6" strokeWidth="1" rx="2" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.2s" fill="freeze" />
+//             </rect>
+//             <line x1="15" y1="15" x2="35" y2="15" stroke="#8b5cf6" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.3s" fill="freeze" />
+//             </line>
+//             <line x1="15" y1="20" x2="35" y2="20" stroke="#8b5cf6" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.4s" fill="freeze" />
+//             </line>
+//             <line x1="15" y1="25" x2="35" y2="25" stroke="#8b5cf6" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.5s" fill="freeze" />
+//             </line>
+//             <line x1="15" y1="30" x2="25" y2="30" stroke="#8b5cf6" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.6s" fill="freeze" />
+//             </line>
 
-            <rect x="20" y="10" width="30" height="40" fill="white" stroke="#06b6d4" strokeWidth="1" rx="2" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.4s" fill="freeze" />
-            </rect>
-            <line x1="25" y1="20" x2="45" y2="20" stroke="#06b6d4" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.5s" fill="freeze" />
-            </line>
-            <line x1="25" y1="25" x2="45" y2="25" stroke="#06b6d4" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.6s" fill="freeze" />
-            </line>
-            <line x1="25" y1="30" x2="45" y2="30" stroke="#06b6d4" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.7s" fill="freeze" />
-            </line>
-            <line x1="25" y1="35" x2="35" y2="35" stroke="#06b6d4" strokeWidth="1" opacity="0">
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.8s" fill="freeze" />
-            </line>
-        </g>
+//             <rect x="20" y="10" width="30" height="40" fill="white" stroke="#06b6d4" strokeWidth="1" rx="2" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.4s" fill="freeze" />
+//             </rect>
+//             <line x1="25" y1="20" x2="45" y2="20" stroke="#06b6d4" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.5s" fill="freeze" />
+//             </line>
+//             <line x1="25" y1="25" x2="45" y2="25" stroke="#06b6d4" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.6s" fill="freeze" />
+//             </line>
+//             <line x1="25" y1="30" x2="45" y2="30" stroke="#06b6d4" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.7s" fill="freeze" />
+//             </line>
+//             <line x1="25" y1="35" x2="35" y2="35" stroke="#06b6d4" strokeWidth="1" opacity="0">
+//                 <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.8s" fill="freeze" />
+//             </line>
+//         </g>
 
-        {/* Connecting lines between data elements with animated dashes - adjusted to not overlap the central circle */}
-        <line x1="320" y1="100" x2="480" y2="100" stroke="#2563eb" strokeWidth="1" strokeDasharray="3,3">
-            <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite" />
-        </line>
-        <line x1="320" y1="300" x2="480" y2="300" stroke="#8b5cf6" strokeWidth="1" strokeDasharray="3,3">
-            <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite" />
-        </line>
-        <line x1="320" y1="100" x2="320" y2="300" stroke="#06b6d4" strokeWidth="1" strokeDasharray="3,3">
-            <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite" />
-        </line>
-        <line x1="480" y1="100" x2="480" y2="300" stroke="#facc15" strokeWidth="1" strokeDasharray="3,3">
-            <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite" />
-        </line>
+//         {/* Connecting lines between data elements with animated dashes - adjusted to not overlap the central circle */}
+//         <line x1="320" y1="100" x2="480" y2="100" stroke="#2563eb" strokeWidth="1" strokeDasharray="3,3">
+//             <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite" />
+//         </line>
+//         <line x1="320" y1="300" x2="480" y2="300" stroke="#8b5cf6" strokeWidth="1" strokeDasharray="3,3">
+//             <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite" />
+//         </line>
+//         <line x1="320" y1="100" x2="320" y2="300" stroke="#06b6d4" strokeWidth="1" strokeDasharray="3,3">
+//             <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite" />
+//         </line>
+//         <line x1="480" y1="100" x2="480" y2="300" stroke="#facc15" strokeWidth="1" strokeDasharray="3,3">
+//             <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite" />
+//         </line>
 
-        {/* Title */}
-        <text x="400" y="30" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#0f172a">
-            Collaborative Financial Intelligence
-        </text>
-        <text x="400" y="50" textAnchor="middle" fontSize="12" fill="#64748b">
-            Where expertise meets technology to transform financial operations
-        </text>
-    </svg>
-)
+//         {/* Title */}
+//         <text x="400" y="30" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#0f172a">
+//             Collaborative Financial Intelligence
+//         </text>
+//         <text x="400" y="50" textAnchor="middle" fontSize="12" fill="#64748b">
+//             Where expertise meets technology to transform financial operations
+//         </text>
+//     </svg>
+// )
 
 // Calendar booking URL
 const CALENDAR_URL =
@@ -788,8 +787,7 @@ export default function PentagramLandingPage() {
                     transition={{ duration: 0.9, delay: 0.4 }}
                     className="mt-2 max-w-xl text-base sm:text-lg text-slate-700 dark:text-slate-300 px-4"
                 >
-                    Numio's suite of intelligent financial solutions transforms complex data into strategic insights, elevating
-                    financial operations from a burden to a competitive advantage.
+                    With Numio's product suite, tax and accounting compliance is easier than ever. We help accounting professionals get more things done while saving time and money.
                 </motion.p>
 
                 <motion.div
@@ -1086,15 +1084,15 @@ export default function PentagramLandingPage() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="max-w-2xl mx-auto text-slate-600 dark:text-slate-300"
                         >
-                            All our solutions are built on a common platform, providing seamless integration and consistent experience
+                            As your business grows, so does your data. Our platform is designed to scale with you, automating your financial processes to let you focus on what matters most. 
                         </motion.p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
                             {
-                                title: "Unified Data Model",
-                                description: "Single source of truth across all financial processes with real-time synchronization",
+                                title: "Automated Workflows",
+                                description: "Tax and accounting processes that run themselves, reducing manual effort",
                                 icon: "🔄",
                             },
                             {
@@ -1208,7 +1206,7 @@ export default function PentagramLandingPage() {
                         </motion.p>
                     </div>
 
-                    <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-16">
                         {/* First Visualization */}
                         <div>
                             <motion.div
@@ -1218,12 +1216,12 @@ export default function PentagramLandingPage() {
                                 transition={{ duration: 0.6 }}
                                 className="text-center mb-6"
                             >
-                                <h3 className="text-2xl font-bold text-secondary dark:text-white mb-3">
+                                {/* <h3 className="text-2xl font-bold text-secondary dark:text-white mb-3">
                                     Real-Time Financial Data Processing
                                 </h3>
                                 <p className="text-slate-600 dark:text-slate-300">
                                     Our advanced algorithms transform raw financial data into actionable insights in real-time
-                                </p>
+                                </p> */}
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
@@ -1237,7 +1235,7 @@ export default function PentagramLandingPage() {
                         </div>
 
                         {/* Second Visualization */}
-                        <div>
+                        {/* <div>
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -1262,7 +1260,7 @@ export default function PentagramLandingPage() {
                             >
                                 <TeamCollaborationVisualization />
                             </motion.div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -1281,9 +1279,7 @@ export default function PentagramLandingPage() {
                             transition={{ duration: 0.6 }}
                             className="inline-block mb-4"
                         >
-                            <div className="bg-primary/10 dark:bg-primary/20 px-4 py-1 rounded-full">
-                                <span className="text-primary dark:text-primary-foreground font-medium">Our Team</span>
-                            </div>
+
                         </motion.div>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
@@ -1291,8 +1287,7 @@ export default function PentagramLandingPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                             className="text-3xl sm:text-4xl font-extrabold text-secondary dark:text-white mb-4"
-                        >
-                            Our Vision & Leadership
+                        >We Have a Strong Foundation
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -1301,7 +1296,6 @@ export default function PentagramLandingPage() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="max-w-2xl mx-auto text-slate-600 dark:text-slate-300"
                         >
-                            Founded by top‑tier financial experts, Numio is on a mission to transform financial operations
                         </motion.p>
                     </div>
 
@@ -1322,18 +1316,16 @@ export default function PentagramLandingPage() {
                             </div>
 
                             <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
-                                Founded by top‑tier tax strategists, visionaries and accountants, Numio is on a mission to blend
-                                rigorous compliance with fintech agility – empowering organisations to move faster, smarter, and
-                                fearlessly.
+                                Founded by top‑tier tax strategists, visionaries and accountants, Numio is on a mission to automate tax and accounting compliance so accounting professionals can focus on what matters most.
                             </p>
 
                             <div className="space-y-4 mb-8">
                                 {[
-                                    { title: "Innovation", description: "Pioneering AI-driven financial intelligence solutions" },
-                                    { title: "Compliance", description: "Ensuring regulatory adherence across global jurisdictions" },
+                                    { title: "Innovation", description: "Pioneering financial intelligence solutions" },
+                                    { title: "Compliance", description: "Ensuring regulatory compliance across global jurisdictions" },
                                     {
                                         title: "Efficiency",
-                                        description: "Streamlining complex financial processes for maximum productivity",
+                                        description: "automate complex financial processes for maximum productivity",
                                     },
                                 ].map((value, i) => (
                                     <motion.div
@@ -1366,7 +1358,15 @@ export default function PentagramLandingPage() {
 
                         {/* Right column - Leadership */}
                         <div className="lg:col-span-7">
-                            <div className="grid md:grid-cols-2 gap-6">
+    <div className="flex justify-center mb-6">
+        <div className="bg-primary/10 dark:bg-primary/20 px-4 py-1 rounded-full">
+            <span className="text-primary dark:text-primary-foreground font-medium">Our Team</span>
+        </div>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-6">
+
+                                
                                 {[
                                     {
                                         name: "Aviv Ben Simchon",
